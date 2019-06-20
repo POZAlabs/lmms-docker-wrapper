@@ -1,0 +1,2 @@
+# lmmscli
+LMMS CLI plugin
