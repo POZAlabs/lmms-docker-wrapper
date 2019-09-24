@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
 RUN apt-get update && \
-    apt-get upgrade -y && \ 	
-    apt-get install -y build-essential cmake git 
-    
+    apt-get upgrade -y && \
+    apt-get install -y build-essential cmake git
+
 RUN apt-get install -y libsndfile1-dev libfftw3-dev libsamplerate0-dev \
                        qtbase5-dev qtbase5-private-dev qttools5-dev-tools qttools5-dev qt5-default \
                        libqt5x11extras5-dev libxinerama-dev libxft-dev libxcb-keysyms1-dev libxcb-util0-dev \
