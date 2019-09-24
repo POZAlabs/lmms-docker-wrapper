@@ -18,7 +18,7 @@ RUN dpkg --add-architecture i386
 RUN apt-get install -y apt-transport-https
 RUN wget -nc https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key
 RUN apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' && apt-get update
-RUN apt install -y --install-recommends winehq-stable gcc-multilib g++-multilib
+RUN apt install -y --install-recommends winehq-stable wine-stable-dev gcc-multilib g++-multilib
 
 # Carla stuff
 # Detour to ubuntu 14
