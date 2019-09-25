@@ -40,6 +40,7 @@ RUN chmod +x /app/wine.sh && /app/wine.sh
 
 
 # Build && install
+ARG CACHEBUST=1
 COPY build.sh /app/
 RUN chmod +x /app/build.sh && /app/build.sh
 
