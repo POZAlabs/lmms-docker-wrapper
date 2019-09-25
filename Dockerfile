@@ -42,3 +42,5 @@ RUN chmod +x /app/wine.sh && /app/wine.sh
 # Build && install
 COPY build.sh /app/
 RUN chmod +x /app/build.sh && /app/build.sh
+
+ENTRYPOINT ["lmms", "--allowroot"]
