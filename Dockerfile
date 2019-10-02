@@ -27,12 +27,6 @@ RUN apt install -y --install-recommends winehq-staging wine-staging-dev gcc-mult
 RUN apt clean
 
 
-# Configure Wine
-RUN apt-get install -y curl
-COPY wine.sh /app/
-RUN chmod +x /app/wine.sh && /app/wine.sh
-
-
 # Build && install
 COPY build.sh /app/
 RUN chmod +x /app/build.sh && /app/build.sh
