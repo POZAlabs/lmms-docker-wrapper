@@ -13,20 +13,14 @@ RUN apt-get install -y libsndfile1-dev libfftw3-dev libsamplerate0-dev \
 
 RUN apt-get install -y wget
 
+
+# wine-staging
 RUN apt-get install -y software-properties-common
 RUN dpkg --add-architecture i386
 RUN apt-get install -y apt-transport-https
 RUN wget -nc https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key
 RUN apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' && apt-get update
 RUN apt install -y --install-recommends winehq-staging wine-staging-dev gcc-multilib g++-multilib
-
-# Carla stuff
-# Detour to ubuntu 14
-RUN add-apt-repository -y 'deb http://ppa.launchpad.net/kxstudio-debian/libs/ubuntu trusty main'
-RUN add-apt-repository -y 'deb http://ppa.launchpad.net/kxstudio-debian/apps/ubuntu trusty main'
-# RUN add-apt-repository -y ppa:kxstudio-debian/libs && add-apt-repository -y ppa:kxstudio-debian/apps
-RUN apt-get update
-RUN apt-get --allow-unauthenticated install -y carla
 
 
 # Remove apt cache
