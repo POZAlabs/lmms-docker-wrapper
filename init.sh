@@ -19,6 +19,8 @@ dpkg --add-architecture i386
 apt-get install -y apt-transport-https
 wget -nc https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' && apt-get update
+# wine-staging-dev g++-multilib -> wine compile library
+# gcc-multilib -> libraray for compiling 32bit on 64bit OS
 apt-get install -y --install-recommends winehq-staging wine-staging-dev gcc-multilib g++-multilib
 
 # for X11 forwarding issue
